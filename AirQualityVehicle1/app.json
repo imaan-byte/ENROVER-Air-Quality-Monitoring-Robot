@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "ENROVER",
+    "slug": "enrover",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/enrover-rover.png",
+    "scheme": "enrover",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.imaansoliman.enrover",
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "ENROVER uses Bluetooth to connect to and control the environmental monitoring rover."
+      }
+    },
+    "android": {
+      "package": "com.imaansoliman.enrover",
+      "permissions": [
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/enrover-rover.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      [
+  "react-native-ble-plx",
+  {
+    "isBackgroundEnabled": false,
+    "bluetoothAlwaysPermission": "ENROVER uses Bluetooth to connect to and control the environmental monitoring rover."
+  }
+]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8d2ddce4-61db-4f7b-a755-8ad707d08bc4"
+      }
+    }
+  }
+}
